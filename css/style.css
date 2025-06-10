@@ -33,7 +33,7 @@
 
 .navbar-logo img {
   border-radius: 50%;
-  border: 3px solid var(--bg);
+  border: 3px solid #fefefe;
   margin-right: 0.5rem;
 }
 
