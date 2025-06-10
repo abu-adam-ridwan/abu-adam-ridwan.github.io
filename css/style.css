@@ -1,0 +1,223 @@
+/* CSS Reset */
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: 1.4rem 5%;
+  border-bottom: 5px solid var(--secondaryColor);
+  background-color: var(--navbarColor);
+  font-size: 1.5rem;
+}
+
+.navbar-logo {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.navbar-logo span {
+  color: var(--bg);
+}
+
+.navbar .navbar-nav {
+  display: flex;
+}
+
+.navbar .navbar-nav a {
+  display: inline-block;
+  margin: 0 4rem;
+  transition: 0.15s;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--bg);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid var(--bg);
+  transform: scaleX(0);
+  transition: 0.2s;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.8);
+}
+
+#menu {
+  display: none;
+}
+
+/* Hero section */
+
+.hero-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  color: var(--headingColor);
+}
+
+.hero-section main {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-section .heading {
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+}
+
+.hero-section .heading span {
+  color: #3c5e3a;
+}
+
+.hero-section .status {
+  font-weight: 700;
+}
+
+.hero-section .bio {
+  font-weight: 100;
+}
+
+.hero-section .cta {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 3px;
+  background-color: #3a6f1b;
+  font-weight: 700;
+  transition: 0.2s;
+  color: #fefefe;
+}
+
+.hero-section .cta:hover {
+  box-shadow: 0 0 10px 8px #fefefe;
+  background-color: #264d13;
+  transform: scale(1.1);
+  color: var(--textMainColor);
+}
+
+.hero-section img {
+  width: 25%;
+  border: 8px solid var(--mainColor);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.hero-section img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px 10px white;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  background-color: var(--secondaryColor);
+  padding: 1.5rem;
+}
+
+footer p {
+  font-weight: 700;
+  color: #eaeaee;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1336px) {
+  :root {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  :root {
+    font-size: 62%;
+  }
+
+  .section-title {
+    margin: 3rem auto;
+  }
+
+  .hero-section {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .hero-section img {
+    width: 200px;
+    margin-top: -10rem;
+  }
+
+  .hero-section main {
+    text-align: center;
+  }
+
+  .hero-section .status {
+    margin-top: 1rem;
+  }
+
+  .navbar .navbar-nav {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 30rem;
+    height: 100vh;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    display: block;
+    font-size: 2.5rem;
+    padding: 2rem;
+    margin: 0 1rem;
+    color: var(--mainColor);
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.4);
+  }
+
+  .navbar {
+    justify-content: flex-end;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  :root {
+    font-size: 55%;
+  }
+}

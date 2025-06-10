@@ -1,0 +1,27 @@
+:root {
+  --bg: #7cfc00;
+  --mainColor: #588157;
+  --secondaryColor: #010101;
+  --textMainColor: #fefefe;
+  --headingColor: #1c1c1c;
+  --navbarColor: #2e4a2d;
+  scroll-behavior: #eaeaea;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
+a {
+  color: var(--textMainColor);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+}
