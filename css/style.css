@@ -33,7 +33,8 @@
 
 .navbar-logo img {
   border-radius: 50%;
-  border: 3px solid var(--bg);
+  border: 3px solid #fefefe;
+  /* test */
   margin-right: 0.5rem;
 }
 
@@ -179,39 +180,8 @@ footer p {
     margin-top: 1rem;
   }
 
-  .navbar .navbar-nav {
-    display: block;
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    width: 30rem;
-    height: 100vh;
-    background-color: #fff;
-    transition: 0.3s;
-  }
-
-  .navbar .navbar-nav.active {
-    right: 0;
-  }
-
-  .navbar .navbar-nav a {
-    display: block;
-    font-size: 2.5rem;
-    padding: 2rem;
-    margin: 0 1rem;
-    color: var(--mainColor);
-  }
-
-  .navbar .navbar-nav a::after {
-    transform-origin: 0 0;
-  }
-
-  .navbar .navbar-nav a:hover::after {
-    transform: scaleX(0.4);
-  }
-
-  .navbar {
-    justify-content: flex-end;
+  .navbar-logo img {
+    width: 40px;
   }
 }
 
@@ -219,5 +189,10 @@ footer p {
 @media (max-width: 450px) {
   :root {
     font-size: 55%;
+  }
+
+  .navbar-logo img {
+    width: 30px;
+    border: 2px solid #fefefe;
   }
 }
